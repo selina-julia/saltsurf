@@ -12,7 +12,21 @@ export class ButtonComponent implements OnInit {
 
     ngOnInit() {}
 
-    public getClassesByType(): string {
-        return "px-5 py-2 rounded-md bg-surf-blue text-slate-50";
+    public getClassesByType(): string[] {
+        const classes = [];
+
+        switch (this.type) {
+            case "light":
+                classes.push("px-5 py-2 rounded-md bg-white/20 text-white");
+                break;
+
+            case "blue":
+                classes.push("px-5 py-2 rounded-md bg-surf-blue text-white");
+                break;
+
+            default:
+                break;
+        }
+        return classes;
     }
 }

@@ -1,8 +1,8 @@
-<div class="flex py-4 items-center">
+<div class="flex py-4 items-center container mx-auto">
     <div class="flex-grow uppercase font-medium text-xl tracking-widest">
         Salt & Surf
     </div>
-    <div class="flex -mx-2">
+    <div class="flex -mx-2" [ngClass]="{ 'text-white': variant === 'light' }">
         <div
             class="mx-2 cursor-pointer"
             *ngFor="let item of navItems"
@@ -12,9 +12,11 @@
         </div>
     </div>
 
-    <div class="mx-7">
+    <div class="mx-7" [ngClass]="{ 'text-white': variant === 'light' }">
         <app-icon iconName="cart"></app-icon>
     </div>
 
-    <app-button>Sign up</app-button>
+    <app-button [type]="variant === 'dark' ? 'blue' : 'light'"
+        >Sign up</app-button
+    >
 </div>
