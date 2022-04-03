@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
-    selector: "app-button",
+    selector: "saltsurf-button",
     templateUrl: "./button.component.html",
     styleUrls: ["./button.component.scss"]
 })
@@ -22,6 +22,10 @@ export class ButtonComponent implements OnInit {
 
             case "blue":
                 classes.push("px-5 py-2 rounded-md bg-surf-blue text-white");
+                break;
+
+            case "textlink":
+                classes.push("text-surf-blue hover:underline");
                 break;
 
             default:

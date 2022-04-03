@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 
 @Component({
-    selector: "app-header",
+    selector: "saltsurf-header",
     templateUrl: "./header.component.html",
     styleUrls: ["./header.component.scss"]
 })
@@ -21,5 +21,6 @@ export class HeaderComponent implements OnInit {
 
     public navigateToUrl(slug: string): void {
         this.router.navigate([slug]);
+        window.scrollTo(0, 0);
     }
 }

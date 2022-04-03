@@ -1,0 +1,19 @@
+.header-nav-item {
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: -3px;
+        left: -10px;
+        right: 10px;
+        height: 2px;
+        width: 0;
+        transition: 200ms ease-in-out;
+    }
+
+    &:hover,
+    .header-nav-item-active {
+        &::after {
+            width: 100%;
+        }
+    }
+}

@@ -6,9 +6,29 @@ import { HeaderModule } from "src/app/shared/modules/header/header.module";
 import { ButtonModule } from "src/app/shared/modules/ui/button/button.module";
 import { ProductsComponent } from "./components/products/products.component";
 import { CategoryItemModule } from "src/app/shared/modules/category-item/category-item.module";
+import { InputModule } from "src/app/shared/modules/ui/input/input.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { RegisterComponent } from "./components/register/register.component";
+import { LoginComponent } from "./components/login/login.component";
+import { ProductItemModule } from "src/app/shared/modules/product-item/product-item.module";
 
 @NgModule({
-    imports: [CommonModule, HeaderModule, ButtonModule, CategoryItemModule],
-    declarations: [PageComponent, StartpageComponent, ProductsComponent]
+    imports: [
+        CommonModule,
+        HeaderModule,
+        ButtonModule,
+        CategoryItemModule,
+        InputModule,
+        ReactiveFormsModule,
+        FormsModule,
+        ProductItemModule
+    ],
+    declarations: [
+        PageComponent,
+        StartpageComponent,
+        ProductsComponent,
+        RegisterComponent,
+        LoginComponent
+    ]
 })
 export class PageModule {}

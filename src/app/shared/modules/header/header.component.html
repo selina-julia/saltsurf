@@ -1,22 +1,36 @@
-<div class="flex py-4 items-center container mx-auto">
-    <div class="flex-grow uppercase font-medium text-xl tracking-widest">
-        Salt & Surf
-    </div>
-    <div class="flex -mx-2" [ngClass]="{ 'text-white': variant === 'light' }">
+<div class="fixed w-full z-110">
+    <div class="flex py-4 items-center container mx-auto pb-20">
         <div
-            class="mx-2 cursor-pointer"
-            *ngFor="let item of navItems"
-            (click)="navigateToUrl(item.slug)"
+            class="flex-grow uppercase font-medium text-xl tracking-widest"
+            (click)="navigateToUrl('/')"
         >
-            {{ item.title }}
+            Salt & Surf
         </div>
-    </div>
+        <div
+            class="flex -mx-3"
+            [ngClass]="{ 'text-white': variant === 'light' }"
+        >
+            <div
+                class="mx-3 cursor-pointer header-nav-item relative"
+                [ngClass]="{
+                    'after:bg-white': variant === 'light',
+                    'after:bg-surf-gray-900': variant == 'dark'
+                }"
+                routerLinkActive="header-nav-item-active"
+                *ngFor="let item of navItems"
+                (click)="navigateToUrl(item.slug)"
+            >
+                {{ item.title }}
+            </div>
+        </div>
 
-    <div class="mx-7" [ngClass]="{ 'text-white': variant === 'light' }">
-        <app-icon iconName="cart"></app-icon>
+        <div class="mx-7" [ngClass]="{ 'text-white': variant === 'light' }">
+            <saltsurf-icon iconName="cart"></saltsurf-icon>
+        </div>
+        <saltsurf-button
+            [type]="variant === 'dark' ? 'blue' : 'light'"
+            (click)="navigateToUrl('register')"
+            >Sign up</saltsurf-button
+        >
     </div>
-
-    <app-button [type]="variant === 'dark' ? 'blue' : 'light'"
-        >Sign up</app-button
-    >
 </div>

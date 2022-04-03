@@ -6,14 +6,16 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
 .typo-vander {
-    @apply text-6xl font-bold uppercase leading-tight;
+    @apply text-5xl lg:text-6xl font-bold uppercase;
+    line-height: 1.2;
 }
 
 .typo-silco {
-    @apply text-3xl font-bold uppercase leading-tight tracking-widest;
+    @apply text-4xl font-semibold uppercase leading-tight tracking-widest;
 }
 
 .typo-vi {
@@ -34,4 +36,8 @@ body {
 
 .typo-powder {
     @apply text-sm font-normal;
+}
+
+input {
+    @apply border-b py-2 focus:outline-none focus:border-surf-blue;
 }

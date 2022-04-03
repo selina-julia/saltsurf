@@ -1,0 +1,16 @@
+<div *ngIf="item" class="mt-40">
+    <div class="w-full h-96 bg-surf-gray-100 shadow-product-shadow relative">
+        <div class="flex w-full justify-center absolute bottom-0">
+            <img class="w-44" [src]="item.image" alt="" />
+        </div>
+
+        <div
+            class="-rotate-90 origin-bottom-left translate-x-20 -translate-y-6 absolute left-0 bottom-0"
+        >
+            <div class="mt-4 typo-vi">
+                {{ item.name }}
+            </div>
+            <div class="text-sm">{{ item.price }} €</div>
+        </div>
+    </div>
+</div>
