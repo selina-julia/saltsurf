@@ -7,7 +7,9 @@ module.exports = {
     theme: {
         colors: {
             "surf-blue": "#026E82",
-            white: "#fff"
+            white: "#fff",
+            "surf-gray-900": "#333",
+            "surf-gray-100": "#F9F9F9"
         }
     },
     variants: {

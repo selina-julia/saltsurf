@@ -9,6 +9,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { PageModule } from "./modules/page/page.module";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
+import { FooterModule } from "./shared/modules/footer/footer.module";
 
 @NgModule({
     declarations: [AppComponent],
@@ -19,7 +20,8 @@ import { NoopAnimationsModule } from "@angular/platform-browser/animations";
         NoopAnimationsModule,
         HttpClientModule,
         AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFireDatabaseModule
+        AngularFireDatabaseModule,
+        FooterModule
     ],
     providers: [],
     bootstrap: [AppComponent]
