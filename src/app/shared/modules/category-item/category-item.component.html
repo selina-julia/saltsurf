@@ -1,7 +1,12 @@
-<div>
-    <!-- <div class="w-full h-96 drop-shadow-2xl"></div> -->
-    <img class="" [src]="item.image" alt="" />
-    <div class="mt-4 typo-vi">
+<div class="group">
+    <div class="overflow-hidden">
+        <img
+            class="duration-500 group-hover:scale-110"
+            [src]="item.image"
+            alt=""
+        />
+    </div>
+    <div class="mt-4 typo-vi duration-200 group-hover:text-surf-blue">
         {{ item.name }}
     </div>
 </div>

@@ -26,33 +26,7 @@ export class ProductService {
             );
     }
 
-    // getRecipes(): Observable<Recipe[]> {
-    //   return this.firestore
-    //     .collection('recipes')
-    //     .snapshotChanges()
-    //     .pipe(
-    //       map((actions) => {
-    //         return actions.map((a) => {
-    //           const data = a.payload.doc.data() as Recipe;
-    //           const uid = a.payload.doc.id;
-    //           return { uid, ...data };
-    //         });
-    //       })
-    //     );
-    // }
-
-    // public fetchUser(): void {
-    //   this.auth.user
-    //     .pipe(
-    //       switchMap((authUser: firebase.User | null) =>
-    //         this.angularFirestore
-    //           .collection<User>('users')
-    //           .doc(authUser?.uid)
-    //           .valueChanges({ idField: 'uid' })
-    //       )
-    //     )
-    //     .subscribe((user) => {
-    //       this.user$.next(user);
-    //     });
-    // }
+    public getProductsById(id: string): Observable<any> {
+        return this.firestore.collection("products").doc(id).valueChanges();
+    }
 }

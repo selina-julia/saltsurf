@@ -26,6 +26,10 @@ body {
     @apply text-xl font-semibold uppercase leading-tight tracking-widest;
 }
 
+.typo-mel {
+    @apply text-lg font-medium leading-tight tracking-widest;
+}
+
 .typo-ekko {
     @apply text-xl font-medium uppercase;
 }
@@ -36,6 +40,10 @@ body {
 
 .typo-powder {
     @apply text-sm font-normal;
+}
+
+.typo-heimerdinger {
+    @apply text-sm font-medium uppercase leading-tight tracking-widest text-surf-gray-900/50;
 }
 
 input {

@@ -12,6 +12,7 @@ export class InputComponent implements OnInit {
     @Input() parentFormControlName!: string | number | null;
     @Input() placeholder?: string;
     @Input() label?: string;
+    @Input() autocomplete?: string;
 
     constructor() {}
 

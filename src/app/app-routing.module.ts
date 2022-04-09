@@ -4,10 +4,12 @@ import { RegisterComponent } from "./modules/page/components/register/register.c
 import { ProductsComponent } from "./modules/page/components/products/products.component";
 import { StartpageComponent } from "./modules/page/components/startpage/startpage.component";
 import { LoginComponent } from "./modules/page/components/login/login.component";
+import { ProductDetailComponent } from "./modules/page/components/product-detail/product-detail.component";
 
 const routes: Routes = [
     { path: "", redirectTo: "/", pathMatch: "full" },
     { path: "", component: StartpageComponent },
+    { path: "product/:productId", component: ProductDetailComponent },
     { path: "boards", component: ProductsComponent },
     { path: "surfwear", component: ProductsComponent },
     { path: "equipment", component: ProductsComponent },

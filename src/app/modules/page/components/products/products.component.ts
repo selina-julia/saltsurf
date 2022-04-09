@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { ProductService } from "src/app/shared/services/product.service";
 import { Product } from "src/app/shared/types/product.type";
 
@@ -10,7 +11,10 @@ import { Product } from "src/app/shared/types/product.type";
 export class ProductsComponent implements OnInit {
     public products?: Product[];
 
-    constructor(private productService: ProductService) {}
+    constructor(
+        private productService: ProductService,
+        private router: Router
+    ) {}
 
     public shopItem = [
         { name: "Surfboards" },
@@ -31,5 +35,10 @@ export class ProductsComponent implements OnInit {
 
     public getUrl(): string {
         return "url('../../../../../assets/images/sub-header.jpg')";
+    }
+
+    public navigateToItem(id: string | undefined): void {
+        this.router.navigate(["/product", id]);
+        window.scrollTo(0, 0);
     }
 }

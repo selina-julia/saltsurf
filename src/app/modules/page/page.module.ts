@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RegisterComponent } from "./components/register/register.component";
 import { LoginComponent } from "./components/login/login.component";
 import { ProductItemModule } from "src/app/shared/modules/product-item/product-item.module";
+import { ProductDetailComponent } from "./components/product-detail/product-detail.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
     imports: [
@@ -21,14 +23,16 @@ import { ProductItemModule } from "src/app/shared/modules/product-item/product-i
         InputModule,
         ReactiveFormsModule,
         FormsModule,
-        ProductItemModule
+        ProductItemModule,
+        RouterModule
     ],
     declarations: [
         PageComponent,
         StartpageComponent,
         ProductsComponent,
         RegisterComponent,
-        LoginComponent
+        LoginComponent,
+        ProductDetailComponent
     ]
 })
 export class PageModule {}
