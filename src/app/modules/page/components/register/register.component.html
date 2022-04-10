@@ -7,56 +7,57 @@
     <form action="" [formGroup]="formGroup" class="flex flex-col -my-5 mb-6">
         <!-- name -->
         <div class="flex -mx-4 my-5">
-            <saltsurf-input
+            <input
                 type="text"
-                label="first name"
-                parentFormControlName="firstName"
+                placeholder="first name"
+                formControlName="firstName"
                 autocomplete="given-name"
-                [parentFormGroup]="formGroup"
                 class="flex-grow mx-4"
-            ></saltsurf-input>
+            />
 
-            <saltsurf-input
+            <input
                 type="text"
+                placeholder="last name"
+                formControlName="lastName"
                 autocomplete="family-name"
-                label="last name"
                 class="flex-grow mx-4"
-            ></saltsurf-input>
+            />
         </div>
 
         <!-- email -->
         <div class="flex my-5">
-            <saltsurf-input
+            <input
                 type="email"
-                label="email adress"
-                parentFormControlName="email"
-                [parentFormGroup]="formGroup"
+                placeholder="email address"
+                formControlName="email"
+                autocomplete="email"
                 class="flex-grow"
-            ></saltsurf-input>
+            />
         </div>
 
         <!-- password -->
         <div class="flex my-5">
-            <saltsurf-input
+            <input
                 type="password"
-                label="password"
-                parentFormControlName="password"
-                [parentFormGroup]="formGroup"
+                placeholder="password"
+                formControlName="password"
+                autocomplete="password"
                 class="flex-grow"
-            ></saltsurf-input>
+            />
         </div>
 
         <div class="flex my-5">
-            <saltsurf-input
+            <input
                 type="password"
-                label="confirm password"
-                parentFormControlName="confirmPassword"
-                [parentFormGroup]="formGroup"
+                placeholder="confirm password"
+                autocomplete="password"
                 class="flex-grow"
-            ></saltsurf-input>
+            />
         </div>
 
-        <saltsurf-button class="mt-5">Sign up</saltsurf-button>
+        <saltsurf-button (click)="onSignUp()" class="mt-5"
+            >Sign up</saltsurf-button
+        >
     </form>
 
     <div class="flex text-sm">
